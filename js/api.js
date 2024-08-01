@@ -1,4 +1,4 @@
-const baseApiUrl = 'http://localhost:8080/api';
+const baseApiUrl = 'http://192.168.60.45:8080/api';
 export let OlmaTechData = null;
 
 export async function fetchAllData() {
