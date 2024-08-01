@@ -1,4 +1,4 @@
-const apiUrl = 'http://45.130.148.137:8080/api/Message';
+const apiUrl = 'http://192.168.60.45:8080/api/Message';
 
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
