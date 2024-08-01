@@ -11,10 +11,6 @@ export async function createHomeSection() {
     const section = document.getElementById('home-section');
     let home = OlmaTechData.homes;
 
-    if (!home || home.length === 0) {
-      throw new Error('No home data available');
-    }
-
     const h3 = document.createElement('h3');
     h3.className = 'vr';
     h3.textContent = "Welcome to OlmaTech";

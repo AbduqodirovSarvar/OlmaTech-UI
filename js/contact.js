@@ -8,10 +8,6 @@ export async function renderContactSection() {
 
     const contactData = OlmaTechData.contacts;
 
-    if (!contactData || contactData.length === 0) {
-      throw new Error('No contact data available in OlmaTechData');
-    }
-
     const phoneLinkElement = document.getElementById('contact-phone-number');
     const footerPhoneLinkElement = document.getElementById('footer-phone-link');
     const telegramLinkElement = document.getElementById('contact-telegram-link');
