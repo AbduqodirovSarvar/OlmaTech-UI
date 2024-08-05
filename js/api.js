@@ -1,4 +1,4 @@
-const baseApiUrl = 'http://192.168.60.45:8080/api';
+export const baseApiUrl = 'https://test.api.olmatech.uz:4443/api';
 export let OlmaTechData = null;
 
 export async function fetchAllData() {

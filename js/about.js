@@ -1,6 +1,6 @@
-import { OlmaTechData } from './api.js';
+import { OlmaTechData, baseApiUrl } from './api.js';
 
-const baseFileApiUrl = 'http://45.130.148.137:8080/api/File';
+const baseFileApiUrl = `${baseApiUrl}/File`;
 
 export function createAboutSection() {
   try {

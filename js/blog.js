@@ -1,6 +1,6 @@
-import { OlmaTechData } from "./api.js";
+import { OlmaTechData, baseApiUrl } from "./api.js";
 
-const baseApiUrl = 'http://45.130.148.137:8080/api/File'; // Ensure this URL is correct
+const baseFileApiUrl = `${baseApiUrl}/File`;
 
 export async function renderBlogSection() {
     const data = OlmaTechData.blogs;
@@ -39,7 +39,7 @@ export async function renderBlogSection() {
 
         col.innerHTML = `
             <div class="blog-entry justify-content-end">
-                <a href="${entry.link}" class="block-20" style="background-image: url('${baseApiUrl}/${entry.photo}');"></a>
+                <a href="${entry.link}" class="block-20" style="background-image: url('${baseFileApiUrl}/${entry.photo}');"></a>
                 <div class="text mt-3 float-right d-block">
                     <div class="d-flex align-items-center pt-2 mb-4 topp">
                         <div class="one mr-2">

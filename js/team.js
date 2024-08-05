@@ -1,7 +1,6 @@
-import { OlmaTechData } from "./api.js";
+import { OlmaTechData, baseApiUrl } from "./api.js";
 
-// Define the base API URL (ensure this matches your setup)
-const baseApiUrl = 'http://45.130.148.137:8080/api';
+const baseFileApiUrl = `${baseApiUrl}/File`;
 
 export async function renderStaffSection() {
     // Check if OlmaTechData.teams exists
@@ -55,7 +54,7 @@ export async function renderStaffSection() {
         staffCol.innerHTML = `
             <div class="staff">
                 <div class="img-wrap d-flex align-items-stretch">
-                    <div class="img align-self-stretch" style="background-image: url(${baseApiUrl}/File/${staffMember.photo});"></div>
+                    <div class="img align-self-stretch" style="background-image: url(${baseFileApiUrl}/${staffMember.photo});"></div>
                 </div>
                 <div class="text d-flex align-items-center pt-3 text-center">
                     <div>

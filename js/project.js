@@ -1,6 +1,6 @@
-import { OlmaTechData } from "./api.js";
+import { OlmaTechData, baseApiUrl } from "./api.js";
 
-const baseApiUrl = 'http://45.130.148.137:8080/api';
+const baseFileApiUrl = `${baseApiUrl}/File`;
 
 export async function renderProjectsSection() {
     const projects = OlmaTechData.projects;
@@ -57,7 +57,7 @@ export async function renderProjectsSection() {
 
         // Create the image element
         const img = document.createElement('img');
-        img.src = `${baseApiUrl}/File/${item.photo}`; // `url(${baseApiUrl}/File/${item.photo})`
+        img.src = `${baseFileApiUrl}/${item.photo}`;
         img.className = 'img-fluid';
         img.alt = 'Project Image';
 
