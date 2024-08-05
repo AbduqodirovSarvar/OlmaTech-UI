@@ -1,4 +1,4 @@
-import { baseApiUrl } from "./api.js";
+import { baseApiUrl } from './api.js';
 const messageApiUrl = `${baseApiUrl}/Message`;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
     contactForm.addEventListener('submit', async (event) => {
       event.preventDefault();
-      console.log(event);
   
       let messageFromName = document.getElementById('message-from-name').value;
       let messageFromEmail = document.getElementById('message-from-email').value;
@@ -30,11 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
   
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          console.log(`HTTP error! Status: ${response.status}`);
+          alert('Your message has not been sent successfully!')
         }
   
-        const result = await response.json();
-        console.log('Form submitted successfully:', result);
         alert('Your message has been sent successfully!');
       } catch (error) {
         console.error('Error submitting form:', error);
