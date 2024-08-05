@@ -1,4 +1,5 @@
-const apiUrl = 'http://192.168.60.45:8080/api/Message';
+import { baseApiUrl } from "./api.js";
+const messageApiUrl = `${baseApiUrl}/Message`;
 
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
   
       try {
-        const response = await fetch(apiUrl, {
+        const response = await fetch(messageApiUrl, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
